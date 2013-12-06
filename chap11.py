@@ -51,18 +51,18 @@ def rot_pair(string1):
 
 def rot_pair_total():
 	iterater()
-	# for line in fin:
-	# 	g = line.strip()
-	# 	print g
-	# 	# print rot_pair(g)
+	for line in fin:
+		g = line.strip()
+		print g
+		# print rot_pair(g)
 		 
 	# return complete dictionary
 
-def iterater():
-	for line in fin:
-		g = line.strip
-		print rot_pair(g)
+# def iterater():
+# 	for line in fin:
+# 		g = line.strip
+# 		print rot_pair(g)
 
-# print rot_pair("evil")
+# # print rot_pair("evil")
 
 rot_pair_total()
