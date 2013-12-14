@@ -19,43 +19,43 @@ fin = open('words.txt')
 
 # #10.7
 
-def is_anagram(string1, string2):
-	a = list(string1)
-	b = list(string2)
+# def is_anagram(string1, string2):
+# 	a = list(string1)
+# 	b = list(string2)
 
-	a.sort()
-	b.sort()
+# 	a.sort()
+# 	b.sort()
 
-	n = 0
+# 	n = 0
 
-	def checker(a,b,n):
-		if n < len(a) and a[n] == b[n]:           
-			n = n + 1
-			return checker(a,b,n)
+# 	def checker(a,b,n):
+# 		if n < len(a) and a[n] == b[n]:           
+# 			n = n + 1
+# 			return checker(a,b,n)
 
-		elif n < len(a) and a[n] != b[n]:
-			print "No, these words are not anagrams."
-			return False
+# 		elif n < len(a) and a[n] != b[n]:
+# 			print "No, these words are not anagrams."
+# 			return False
 
-		elif n >= len(a):
-			print "Yes, these words are anagrams."
-			return True
+# 		elif n >= len(a):
+# 			print "Yes, these words are anagrams."
+# 			return True
 		
 
 		
 
-	if len(a) == len(b):
-		return checker(a,b,n)
+# 	if len(a) == len(b):
+# 		return checker(a,b,n)
 
 
-	else:
-		print "No, these words are not anagrams."
-		return False
+# 	else:
+# 		print "No, these words are not anagrams."
+# 		return False
 	
 
 
 
-print is_anagram("reeh", "here")
+# print is_anagram("reeh", "here")
 
 
 
@@ -64,7 +64,6 @@ print is_anagram("reeh", "here")
 #10.13 interlocking words
 
 def interlock(a,b,c,n):
-	n = 0
 	for x in a:
 		c.append(a[n])
 		c.append(b[n])
@@ -79,34 +78,33 @@ def interlock(a,b,c,n):
 
 
 def interlock_check(string1):
-	for line in fin:
+	fin1 = open('words.txt')
+	for line in fin1:
 		word = line.strip()
-
 		if len(string1) == len(word):
 			a = string1
 			b = word
 			n = 0
 			c = []
 			e = interlock(a,b,c,n)
+			fin2 = open('words.txt')
+			for line in fin2:
+				word = line.strip()
+				if e == word:
+					print e
+	print "done with word"
 
-			# for y in fin:
-			# 	word1 = y.strip()
-			# 	if word1 == "schooled":
-			# 		print word1
-					# print e
 
-
-# def interlock_total():
-# 	for line in fin:
-# 		word = line.strip()
-# 		interlock_check(word)
-
-		
-print interlock_check("shoe")
+def interlock_total():
+	fin3 = open('words.txt')
+	for line in fin3:
+		word = line.strip()
+		interlock_check(word)
 
 
 
-#interlock_total()
+
+interlock_total()
 
 
 
